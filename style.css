@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --header-color: #ffea20;
+  --gallery-color: #8dcbe6;
+  --main-color: #9df1df;
+  --footer-color: #9df1df;
+}
+/*header styling*/
+
+.header {
+  background-color: var(--header-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*logo*/
+
+.logo img {
+  height: 70px;
+  width: 70px;
+  margin-left: 15px;
+  transition: 2s;
+  border-radius: 20px;
+}
+.logo img:hover {
+  height: 80px;
+  width: 80px;
+}
+/*nav*/
+
+.nav-items a {
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 25px;
+  transition: 2s;
+  color: black;
+}
+.nav-items a:hover {
+  font-size: 30px;
+}
+
+/*gallery*/
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: var(--gallery-color);
+}
+.image-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+/*h1*/
+#gallery {
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px;
+  color: #333;
+  text-align: center;
+  text-transform: capitalize;
+}
+.image-container .image {
+  height: 250px;
+  width: 350px;
+  border: 10px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+.image-container .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.image-container .image:hover img {
+  transform: scale(1.2);
+}
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+.popup-image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .popup-image img {
+    width: 80%;
+    height: 70%;
+  }
+}
+/*footer*/
+.footer {
+  min-height: 100px;
+  background-color: var(--footer-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.social .bx {
+  animation-duration: 10s;
+}
+.contact{
+text-align: center;
+}
+#phone{
+    font-weight: 600;
+    font-size: 40px;
+}

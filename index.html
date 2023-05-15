@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Cleopatra</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img src="img/logo.jpg" alt="" />
+      </div>
+      <div class="nav-items">
+        <a href="#gallery">gallery</a>
+        <a href="">gallery</a>
+        <a href="">gallery</a>
+        <a href="#call">Contact</a>
+      </div>
+      <div></div>
+    </header>
+    <div class="container">
+      <h1 id="gallery">gallery</h1>
+      <div class="image-container">
+        <div class="image"><img src="img/1.jpg" alt="" /></div>
+        <div class="image"><img src="img/2.jpg" alt="" /></div>
+        <div class="image"><img src="img/3.jpg" alt="" /></div>
+        <div class="image"><img src="img/4.jpg" alt="" /></div>
+        <div class="image"><img src="img/5.jpg" alt="" /></div>
+        <div class="image"><img src="img/6.jpg" alt="" /></div>
+        <div class="image"><img src="img/7.jpg" alt="" /></div>
+        <div class="image"><img src="img/8.jpg" alt="" /></div>
+        <div class="image"><img src="img/9.jpg" alt="" /></div>
+        <div class="image"><img src="img/10.jpg" alt="" /></div>
+        <div class="image"><img src="img/11.jpg" alt="" /></div>
+        <div class="image"><img src="img/12.jpg" alt="" /></div>
+        <div class="image"><img src="img/13.jpg" alt="" /></div>
+        <div class="image"><img src="img/14.jpg" alt="" /></div>
+        <div class="image"><img src="img/15.jpg" alt="" /></div>
+        <div class="image"><img src="img/16.jpg" alt="" /></div>
+        <div class="image"><img src="img/17.jpg" alt="" /></div>
+        <div class="image"><img src="img/18.jpg" alt="" /></div>
+        <div class="image"><img src="img/19.jpg" alt="" /></div>
+        <div class="image"><img src="img/20.jpg" alt="" /></div>
+      </div>
+      <div class="popup-image">
+        <span>&times;</span>
+        <img src="img/1.jpg" alt="" />
+      </div>
+    </div>
+    <footer class="footer" id="call">
+      <div class="social">
+        <h1>social media</h1>
+        <a href=""><i class="bx bxl-whatsapp bx-lg  bx-tada "></i></a>
+        <a href=""><i class="bx bxl-instagram bx-lg  bx-tada "></i></a>
+        <a href=""><i class="bx bxl-facebook-circle bx-lg  bx-tada "></i></a>
+      </div>
+      <div class="contact">
+        <h1>call us</h1>
+        <i class="bx bx-phone-call bx-lg"></i> 
+        <span id="phone">01061494029</span>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.querySelectorAll(".image img").forEach((image) => {
+      image.onclick = () => {
+        document.querySelector(".popup-image").style.display = "block";
+        document.querySelector(".popup-image img").src =
+          image.getAttribute("src");
+      };
+    });
+    document.querySelector(".popup-image span").onclick = () => {
+      document.querySelector(".popup-image").style.display = "none";
+    };
+  </script>
+</html>
