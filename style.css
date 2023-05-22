@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 :root {
-  --header-color: #ffea20;
-  --gallery-color: #8dcbe6;
-  --main-color: #9df1df;
-  --footer-color: #9df1df;
+  --header-color: rgba(255, 255, 255, 0.432);
+  --gallery-color: #8dcbe62d;
+  --main-color: #9df1df63;
+  --footer-color: #130b88a1;
 }
 /*header styling*/
 
@@ -42,6 +42,7 @@
 }
 .nav-items a:hover {
   font-size: 30px;
+  color: rgba(255, 0, 0, 0.507);
 }
 
 /*gallery*/
@@ -110,27 +111,22 @@
   transform: translate(-50%, -50%);
   border: 5px solid #fff;
   border-radius: 5px;
-  width:auto;
-  height: auto;
-  object-fit:contain;
+  width:80%;
+  height:80%;
+  object-fit:cover;
 }
 
 
 @media (max-width: 768px) {
   .popup-image img {
-    width: 70%;
-    height: 70%;
+    width:70%;
+    height: 40%;
     object-fit:contain;
   }
   .nav-items{
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-    margin-right: 10px;
-  }
-  .spare{
     display: none;
   }
+ 
 }
 /*footer*/
 .footer {
@@ -140,13 +136,52 @@
   justify-content: space-around;
   align-items: center;
 }
+.social{
+  margin-right: 10px;
+}
 .social .bx {
   animation-duration: 10s;
 }
 .contact{
 text-align: center;
 }
+.contact h1{
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px;
+  color:black;
+  text-align: center;
+  text-transform: capitalize;
+  } 
 #phone{
     font-weight: 600;
     font-size: 40px;
+}
+.summry{
+  background-color: var(--main-color);
+  text-align: center;
+  margin-bottom: 5px;
+  min-height:100px;
+}
+
+.summry h1{
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px;
+  color:black;
+  text-align: center;
+  text-transform: capitalize;
+
+}
+.summry h2{
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px;
+  color: black;
+  text-align: center;
+  text-transform: capitalize;
+
+}
+.summry h3{
+  word-spacing:2px;
 }
