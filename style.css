@@ -10,12 +10,19 @@
   --footer-color: #130b88a1;
 }
 /*header styling*/
-
+body{
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .header {
   background-color: var(--header-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+}
+.nav-menu{
+  transition: 3s;
 }
 
 /*logo*/
@@ -43,6 +50,9 @@
 .nav-items a:hover {
   font-size: 30px;
   color: rgba(255, 0, 0, 0.507);
+}
+.hidden-menu{
+  display:none;
 }
 
 /*gallery*/
@@ -125,6 +135,12 @@
   }
   .nav-items{
     display: none;
+    
+  }
+  .hidden-menu{
+    display:flex;
+    flex-direction: column;
+    cursor: pointer;
   }
  
 }
@@ -137,7 +153,7 @@
   align-items: center;
 }
 .social{
-  margin-right: 10px;
+  margin-left: 10px;
 }
 .social .bx {
   animation-duration: 10s;
