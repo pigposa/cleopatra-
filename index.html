@@ -15,19 +15,23 @@
     <header class="header">
       <div class="logo">
         <img src="img/logo.jpg" alt="" />
+        <div class="social">
+     
+          <a href="https://wa.me/00201061494029"><i class="bx bxl-whatsapp bx-sm  bx-tada "></i></a>
+          <a href="https://instagram.com/cliopatra.advertising?igshid=OTk0YzhjMDVlZA=="><i class="bx bxl-instagram bx-sm  bx-tada "></i></a>
+          <a href="https://www.facebook.com/cleopatraadvertising?mibextid=ZbWKwL"><i class="bx bxl-facebook-circle bx-sm  bx-tada "></i></a>
+        </div>
       </div>
+      <div class="nav-menu">
+      <div class="hidden-menu"><i class='bx bx-menu bx-lg'></i></div>
       <div class="nav-items">
         <a href="#summry">نبذه</a>
         <a href="#gallery">اعمالنا</a>
         <a href="#location">موقعنا</a>
         <a href="#call">تواصل معنا</a>
       </div>
-      <div class="social">
-     
-        <a href=""><i class="bx bxl-whatsapp bx-md  bx-tada "></i></a>
-        <a href=""><i class="bx bxl-instagram bx-md  bx-tada "></i></a>
-        <a href=""><i class="bx bxl-facebook-circle bx-md  bx-tada "></i></a>
-      </div>
+    </div>
+      
     </header>
     <div class="summry" id="summry">
       <h1>نبذه</h1>
@@ -81,6 +85,7 @@
     </footer>
   </body>
   <script>
+    // imges block
     document.querySelectorAll(".image img").forEach((image) => {
       image.onclick = () => {
         document.querySelector(".popup-image").style.display = "block";
@@ -90,6 +95,23 @@
     });
     document.querySelector(".popup-image span").onclick = () => {
       document.querySelector(".popup-image").style.display = "none";
+    }; 
+
+    // show and hide menu
+    
+    let hidden= document.querySelector(".hidden-menu")
+   
+    hidden.onclick = () => {
+      let menu = document.querySelector(".nav-items")
+    menu.style.cssText='display:flex;flex-direction:column;gap:15px';
+    hidden.style.cssText='display:block'
+    hidden.onclick =()=>{
+      menu.style.cssText='display:none';
+    }
+   if(hidden.onclick ==true) {
+    
+   }
+    
     }; 
   </script>
 </body>
